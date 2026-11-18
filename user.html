@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard - CareerTrack</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body onload="loadUserDashboard()">
+
+<header class="dashboard-header">
+    <h2>CareerTrack<span>.</span></h2>
+    <div>
+        <span id="welcomeUser"></span>
+        <button onclick="logoutUser()">Log Out</button>
+    </div>
+</header>
+
+<main class="user-container">
+
+    <section class="welcome">
+        <h1>Welcome, <span id="userName"></span>!</h1>
+        <p>Explore opportunities and manage your job applications.</p>
+    </section>
+
+    <section class="user-stats">
+        <div class="stat-card">
+            <h2 id="availableJobs">0</h2>
+            <p>Available Jobs</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="appliedJobs">0</h2>
+            <p>My Applications</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="interviewJobs">0</h2>
+            <p>Interviews</p>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Explore Job Opportunities</h2>
+
+        <input type="text" id="jobSearch" placeholder="Search by job title or company..." onkeyup="showUserJobs()">
+
+        <select id="statusFilter" onchange="showUserJobs()">
+            <option value="All">All Jobs</option>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <div id="userJobList"></div>
+    </section>
+
+    <section class="panel">
+        <h2>My Applications</h2>
+        <div id="myApplicationList"></div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

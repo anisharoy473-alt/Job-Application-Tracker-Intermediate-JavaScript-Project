@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login / Sign Up - CareerTrack</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-left">
+        <a href="home.html" class="back-home">← Back to Home</a>
+
+        <div class="auth-left-content">
+            <h1>CareerTrack<span>.</span></h1>
+            <h2>Your Career Journey Starts Here.</h2>
+            <p>
+                Organise your job applications, discover opportunities
+                and take the next step towards your future.
+            </p>
+        </div>
+    </div>
+
+    <div class="auth-right">
+
+        <div class="auth-tabs">
+            <button id="loginTab" class="active" onclick="showLogin()">Log In</button>
+            <button id="signupTab" onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+
+        <div id="loginBox">
+            <h2>Welcome Back!</h2>
+            <p class="form-description">Log in to access your account.</p>
+
+            <form onsubmit="loginUser(event)">
+
+                <label>Email Address</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                <label>Login As</label>
+                <select id="loginRole" required>
+                    <option value="">Select Account Type</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <p class="switch-text">
+                Don't have an account?
+                <span onclick="showSignup()">Sign Up</span>
+            </p>
+
+            <div class="demo-details">
+                <p><b>Demo Admin:</b> admin@demo.com</p>
+                <p><b>Password:</b> admin123</p>
+                <br>
+                <p><b>Demo User:</b> user@demo.com</p>
+                <p><b>Password:</b> user123</p>
+            </div>
+        </div>
+
+        <!-- SIGN UP FORM -->
+
+        <div id="signupBox" style="display:none;">
+            <h2>Create Account</h2>
+            <p class="form-description">Register to start your career journey.</p>
+
+            <form onsubmit="registerUser(event)">
+
+                <label>Full Name</label>
+                <input type="text" id="signupName" placeholder="Enter your name" required>
+
+                <label>Email Address</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <span onclick="showLogin()">Log In</span>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>                                                                                                

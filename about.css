@@ -1,0 +1,101 @@
+@import url("home.css");
+
+.page-banner {
+    background: #183b56;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.page-banner h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    color: #d5e0e7;
+}
+
+.content {
+    padding: 80px 10%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.content > div:first-child {
+    flex: 1;
+}
+
+.content h2 {
+    color: #183b56;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #71818a;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    width: 380px;
+    height: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #00000015;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.values {
+    background: #f1f6f8;
+    text-align: center;
+    padding: 75px 10%;
+}
+
+.values h2 {
+    color: #183b56;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #183b56;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #71818a;
+    line-height: 1.7;
+}
+
+@media(max-width: 750px) {
+    .content, .cards {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 380px;
+        height: 280px;
+    }
+}
